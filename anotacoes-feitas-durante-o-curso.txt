@@ -1,0 +1,311 @@
+Baseado no curso de JavaScript do Curso em Vídeo
+
+window.alert	Exibe uma mensagem de alerta para o usuário
+window.confirm	Exibe uma janela com botões Ok e Cancel
+window.prompt	Abre um campo de digitação para o usuário
+
+################## Variáveis e Tipos Primitivos
+
+// 	Para comentários de uma única linha
+
+/**/ 	Para comentários de mais de uma linha
+
+VARIÁVEIS
+Em sua criação, as variáveis recebem a palávra var na sua frente:
+var [NOME DA VARIÁVEL] = [VALOR]
+
+FORMAS DE SE DECLARAR UMA VARIÁVEL DO TIPO STRING:
+""	Aspas duplas
+''	Aspas simples
+``	Crases
+OBS: Tem diferença entre elas.
+
+--REGRAS PARA NOMEAR IDENTIFICADORES NO JAVASCRIPT:
+- Podem começar com letra, $ ou _
+- Não podem começar com números
+- É possível usar letras ou números (com exceção do primeiro caracter do identificador)
+- É possível usar acentos e símbolos (símbolo do pi), como variáveis
+- Não podem conter espaços
+- Não podem ser palavras reservadas
+
+--DICAS:
+- Maiúsculas e minúsculas fazem diferença
+- Tente escolher nomes coerentes para as variáveis
+
+--TIPOS DE DADOS DO JAVASCRIPT:
+- number: O javascript não diferencia inteiro de real
+	infinity
+	NaN (Not a number)
+- string: conjuntos de caracteres
+- boolean: true e false
+- null <- este é um objeto para o JavaScript
+- undefined
+- object
+	Array
+- function
+OBS: Não se define um tipo na criação da variável, tornando seu conteúdo dinâmico (uma variável pode receber diferentes tipos)
+
+typeof [VARIÁVEL]	permite verificar o tipo de dados que uma determinada variável ou valor contém.
+Quando colocamos o valor em sí (sem estar dentro de uma variável), chamador de valor LITERAL.
+
+NODEJS
+Ctrl+L	Limpa a tela do terminal do Node
+
+################## Tratamento de Dados
+
+O resultado de um input do | windows.prompt | é uma string, sendo assim é necessário converter, em caso de operações matemáticas.
+
+-- Para converter string para número (real ou inteiro):
+- Number.parseInt([ENTRADA])	Não há a necessidade de ter o "Number"
+- Number.parseFloat([ENTRADA])	Não há a necessidade de ter o "Number"
+- Number([ENTRADA]) <- Neste caso, o próprio JavaScript tomará a decisão correta de conversão.
+
+-- Para converter inteiro ou real para string:
+- [ENTRADA].toString()
+- String([ENTRADA])
+
+Para saída de dados contendo valores de variáveis, além da concatenação, temos a utilização da template string, são delimitadas por crases, onde cada variável vai dentro de um placeholder ${[VARIÁVEL]}.
+
+`Meu nome é ${nome} e tenho ${idade} anos`
+
+document.write('[MENSAGEM]')	Permite escrever uma mensagem na própria tela, também aceita tags HTML dentro do texto.
+
+-- ALGUNS MÉTODOS PARA TRATAMENTO DE STRING
+- [STRING].length		Mostra a quantidade de letras da string
+- [STRING].toUpperCase()	Coloca a string toda em maiúscula
+- [STRING].toLowerCase()	Coloca a string toda em minúscula
+
+-- ALGUNS MÉTODOS PARA TRATAMENTO DE NÚMEROS
+- [VARIÁVEL].toFixed([CASAS])		Define a quantidade de casas decimais que serão mostradas
+- [VARIÁVEL].toFixed([CASAS]).replace('[ITEM_1]', '[ITEM_2]')	Define as casas decimais e faz a substituição ("equivalência") do primeiro item pelo segundo.
+- [VARIÁVEL].toLocaleString('pt-BR', {style: 'currency', corrency: 'USD'})	NESTE caso, fará a formatação monetária para a moeda americana (dolar)
+
+################# Operadores (Parte I)
+
+-- Operadores binários (aqueles que precisam de dois operados)
+
+-- Ordem de precedência
+1º ()
+2º **
+3º * / %
+4º + -
+OBS: Não há o operador de divisão inteira
+
+-- Os tipos de atribuição (simples ou auto-atribuição), bem como os operadores de incremento (pré e pos), são os mesmo do Java e outras linguagens.
+
+################# Operadores (Parte II)
+
+-- Os operadores relacionais (>, <, >=, ...) são os mesmos do Java e de outras linguagens, porém, nos casos dos OPERADORES DE IDENTIDADE, temos as seguites diferenças:
+- 5 == 5		true
+- 5 == '5'		true: O sinal de igualdade, no caso do JavaScript, NÃO testa o TIPO, mas sim a GRANDEZA.
+- 5 === '5'	false: Para o JavaScript levar em consideração o tipo, fazemos o uso do OPERADOR DE IGUALDADE RESTRITA (===)
+
+--  Os operadores lógicos do JavaScript são os mesmos encontrados de outras linguagens (já na ordem de precedência):
+- !	Negação: Operador unário, simplemente invertendo UM valor lógico que vai na frente do operador.
+- &&	Conjunção: Operador binário (valor nos dois lados do operador).
+- ||	Disjunção: Operador binário (valor nos dois lados do operador).
+
+OBS: Quando se tem operadores aritméticos, relacionais e lógicos em uma mesma expressão, a ordem de resolução será:
+	1º Operadores aritméticos
+	2º Operadores relacionais	Fazendo quem vez primeiro (sem ordem de precendência interna)
+	3º Operadores lógicos
+
+-- Operadores ternários: Funciona da mesma forma que no Java:
+[TESTE] ? [VALOR_1 SE VERDADEIRO] : [VALOR_2 SE FALSO]
+
+################ Intrudução ao DOM (Document Object Model [Modelo de Objeto para Documentos])
+
+	Um conjunto de objetos, dentro do navegador, que da acesso aos componentes internos do navegador.
+	[FIGURA 1]
+	OBS: A figura é apenas a representação de alguns ELEMENTOS DOM, sendo que o mesmo possui muitos outros.
+	Métodos mais usado para SELECIONAR um ELEMENTO da árvore DOM
+	- Por marca (tags)
+		getElementsByTagName('[NOME DA TAG]')['[INDEX DO ELEMENTO]'] : Neste método, elemento ele pegará todas as tags que possuem o nome desejado, por isso "Elements" está no plural. O item OPCIONAL é para caso queira pegar UM DESSES OBJETOS em específico.
+	- Por ID
+		getElementById('[ID DO ELEMENTO]') : Mesmo princípio, porém, como ID é único, ele pegará somente um elemento.
+	- Por nome
+		getElementsByName('[NOME DO ELEMENTO]')[[INDEX DO ELEMENTO]]
+	- Por classe
+		getElementsByClassName('[NOME DA CLASSE ELEMENTO]')[[INDEX DO ELEMENTO]]
+	- Pelo Seletor
+		querySelector('[ELEMENTO][CARACTER][NOME]')
+			Onde:
+			-ELEMENTO: É o tipo de elemento que se deseja pegar (div, p, h1, etc)
+			-CARACTER: Vai depender da classe ou identificador. Será '#', caso seja um identificador (id) ou '.', caso seja uma classe
+			-NOME: Nome dado a classe ou identificador
+	OBS: No casos dos inputs do tipo "radio", o [INDEX DO ELEMENTO] representa um item do grupo
+
+-- Outros métodos
+	[VARIÁVEL].innerText : Pega/seleciona conteúdo do texto
+	[VARIÁVEL].innerHTML : Pega/seleciona o conteúdo do texto, incluindo as formatações das tags HTML filhas e os espaços
+
+#################### Eventos DOM
+
+-- Para criar uma função em JavaScript, faz-se:
+	function [NOME DA FUNÇÃO](| [PARÂMETROS] OPCIONAL |){
+		[BLOCO DE COMANDOS]
+	}
+
+OBS: Em JS existe as funções anonimas, que são aquelas que não tem nome.
+
+-- Eventos para o mouse, no JavaScript, devem estar presentes ou dentro das tags ou em eventListener:
+	Quando em tags:
+		- onclick : Quando o usuário clicar com o mouse
+		- onmouseenter : Quando o mouse estiver dentro
+		- onmouseout : Quando o mouse estiver fora
+		- onmousedown : Quando o botão do mouse estiver precionado
+		- onmouseup: Quando o botão do mouse for solto
+		- onmousemove: Quando o mouse se mexer
+	Quando em eventListener, basta tirar o 'on' da frente:
+		[VARIÁVEL].addEventListener('click', [FUNÇÃO A SER CHAMADA])
+		[VARIÁVEL].addEventListener('mouseenter', [FUNÇÃO A SER CHAMADA])
+		[VARIÁVEL].addEventListener('mouseout', [FUNÇÃO A SER CHAMADA])
+		[...]
+
+-- Para casos onde se precisa pegar valores de campos (input) em HTML5, há a necessidade da utilização da função "value":
+	Number.parseInt(window.document.getElementById('[ID DO ELEMENTO]').value);
+	Number.parseFloat(window.document.getElementById('[ID DO ELEMENTO]').value);
+	[...]
+
+################# Condições - Parte I
+
+-- Condição simples (if)
+-- Condição composta (if, else)
+-- Condição aninhada (if, else if, else)
+
+################# Condições - Parte II
+
+-- Condição Múltipla (switch) é a mesma de outras linguagens de programação, servindo tanto para números inteiro quando para caracteres.
+-- Para pegar o dia da semana e/ou a hora:
+	1º - Cria um objeto da class Date();
+		var [VARIÁVEL_1] = new Date();
+	2º - Importando o dia da semana e a hora, respectivamente:
+		var [VARIÁVEL_2] = [VARIÁVEL_1].getDay();
+			Podendo ser 0 (Domingo) e terminando com 6 (Sábado)
+		var [VARIÁVEL_3] = [VARIÁVEL_1].getHours();
+			Pega só as HORAS do sistema (sem minutos).
+		var [VARIÁVEL_4] = [VARIÁVEL_1].getFullYear();
+			Pega o ano, neste caso com quatro dígitos
+		[TAMBÉM EXISTEM OUTROS MÉTODOS DE ACESSO A INFORMAÇÕES DO SISTEMA, OS APRESENTADOS AQUI SÃO APENAS ALGUNS]
+
+################# Exercícios JavaScript (Parte 2)
+
+-- Para fazer com que a página execute um script html toda vez que é iniciada, coloca-se o parâmetro "onload", na tag que se deseja, seguida da função a ser executada
+	Ex: <body onload="[FUNÇÃO]"></body>
+
+-- Para alterar a foto no JavaScript, basta fazer uso da propriedade do CSS3 "src":
+	Ex: [OBJETO].src = "[CAMINHO DA NOVA IMAGEM]"
+
+-- Para centralizar texto no JavaScript, usamos o comando "textAling":
+	Ex: [OBJETO].style.textAlign = [PROPRIEDADE]
+
+-- Podemos criar um elemento HTML com o JavaScript, usando o "createElement":
+	Ex: var [VARIÁVEL] = document.createElement('[NOME DO ELEMENTO]')
+		Além disso, podemos:
+		- Dar um atributo a ele, como no HTML:
+			[ELEMENTO/VARIÁVEL].setAttribute('[ATRIBUTO]', '[PROPRIEDADE]')
+
+-- A tag label, no HTML5, permite vincular algo, através do atributo "for" a uma seleção do tipo radio ou um checkbox:
+	Ex: <label for="[ID RADIO/ID CHECKBOX]">[ELEMENTO A SER VINCULADO]</label>
+
+	OBS: Em alguns casos, é necessário indicar o local onde se deseja colocar o conteúdo da variável criada:
+		[LOCAL ("DEPOIS DE...")].appendChild([ELEMENTO/VARIÁVEL])
+
+################ Repetições (Parte 1)
+
+-- As estrutura de repetição no JavaScript são as mesmas encontradas na maioria das linguagens de programação:
+	- do : Com teste lógico no fim
+	- while : Com teste lógico no início
+
+################ Repetições (Parte 2)
+
+-- A estrutura de repetição "for" funciona de forma semelhante ao Java:
+	for (var [VARIÁVEL_1] = [VALOR]; [ESTRUTURA LÓGICA]; [INCREMENTO]) {
+		[BLOCO DE COMANDOS]
+	}
+
+################ Exercício JavaScript (Parte 5)
+
+Para ver se um determinado campo de entrada está fazio, usa-se o length para ver quantas casas ela possui:
+	[VARIÁVEL].value.length - [0 significa que está vazio o campo]
+
+################ Exercício JavaScript (Parte 6)
+
+No JavaScript, para adicionar um item a uma lista do tipo select, é necessário criar um elemento option:
+	var [VARIÁVEL_1] = document.createElement('option')
+		OBS: O createElement cria elementos únicos, sendo assim, nesse caso, é necessário criar um elemento para cada option a ser anexado no select.
+	Para ter acesso ao texto que será exposto no elemento option, usa-se o .text:
+		[VARIÁVEL_1].text = [TEXTO]
+	Por último, para adicionar o option, é necessário fazer o uso do função appendChild
+
+############### Variáveis Compostas
+
+Para criar um vetor em JavaScript:
+	let [VETOR] = [[VALOR_1], [VALOR_2], [VALOR_3], ...]
+Em JavaScript, o primeiro valor de um vetor tem índice 0.
+
+O vetor é composto de elementos, sendo um par que agrupa:
+	- O espaço da memória;
+	- O valor colocado nesse espaço;
+	- O índice;
+
+Para acrescentar novos valores a um array pré-existênte:
+	- [VETOR][ÍNDICE A SER ADICIONADO] = [VALOR]
+	OU
+	- Pelo método interno, .push:
+		[VETOR].push([VALOR])
+
+Para saber o comprimento de um vetor, usa-se o ATRIBUTO:
+	[VETOR].length
+
+Para organizar um vetor, usa-se o método .sort:
+	[VETOR].sort()
+	OBS: O sort "puro" faz o ordenamento tratando os dados como String. Para o ordenamento de valores numéricos, usa-se, como PARÂMETRO do sort uma FUNÇÃO ANÔNIMA:
+		function(a, b) {return a - b}
+
+Existe também o "for in", que é um for para variáveis compostas e objetos, sua sintaxe é:
+	for (var [VARIÁVEL] in [VETOR]) {
+		console.log([VETOR][[VARIÁVEL]])
+	}
+
+Para fazer a busca do índice de um determinado valor:
+	[VETOR].indexOf([VALOR])
+	OBS: Caso não haja o valor, retornará -1.
+
+############## FUNÇÕES
+
+Como já vimos, para criar uma função em JavaScript, faz-se:
+	function [NOME DA FUNÇÃO](| [PARÂMETROS] OPCIONAL |){
+		[BLOCO DE COMANDOS]
+	}
+
+No JavaScript é possível fazer uma variável receber uma função diretamente:
+	var [VARIÁVEL] = function(|[PARÂMETROS] OPCIONAIS |) {
+		[COMANDOS]
+	}
+
+Na passagem de parâmetro, caso queira colocar um VALOR PADRÃO:
+	[PARÂMETRO]=[VALOR]
+
+Recursividade é quando uma função chama ela mesma
+
+############# Exercício JavaScript (Parte 5)
+
+Para ver se um determinado campo de entrada está fazio, usa-se o length para ver quantas casas ela possui:
+	[VARIÁVEL].value.length - [0 significa que está vazio o campo]
+
+############# Exercício JavaScript (Parte 6)
+
+No JavaScript, para adicionar um item a uma lista do tipo select, é necessário criar um elemento option:
+	var [VARIÁVEL_1] = document.createElement("option")
+	Para ter acesso ao texto que será exposto no elemento option, usa-se o .text:
+		[VARIÁVEL_1].text = [TEXTO]
+
+############## Exercício JavaScript (Parte 8)
+
+Para limpar um elemento do tipo input no JavaScript, use:
+	[ELEMENTO INPUT].value = ''
+	OBS: O elemento só ficará VAZIO EM TEMPO REAL se o "value" NÃO estiver presente durante a criação do objeto, mas somente durante o uso do valor do mesmo.
+
+Para retornar a um input depois de uma determinada ação, use a função .focus():
+	[ELEMENTO INPUT].focus()
