@@ -91,14 +91,14 @@ document.write('[MENSAGEM]')	Permite escrever uma mensagem na própria tela, tamb
 4º + -
 OBS: Não há o operador de divisão inteira
 
--- Os tipos de atribuição (simples ou auto-atribuição), bem como os operadores de incremento (pré e pos), são os mesmo do Java e outras linguagens.
+-- Operadores simples, auto-atribuição e de incremento (pré e pos), são os mesmo do Java e outras linguagens.
 
 ################# Operadores (Parte II)
 
 -- Os operadores relacionais (>, <, >=, ...) são os mesmos do Java e de outras linguagens, porém, nos casos dos OPERADORES DE IDENTIDADE, temos as seguites diferenças:
-- 5 == 5		true
-- 5 == '5'		true: O sinal de igualdade, no caso do JavaScript, NÃO testa o TIPO, mas sim a GRANDEZA.
-- 5 === '5'	false: Para o JavaScript levar em consideração o tipo, fazemos o uso do OPERADOR DE IGUALDADE RESTRITA (===)
+- 5 == 5	true
+- 5 == '5'	true: O sinal de igualdade, no caso do JavaScript, NÃO testa o TIPO, mas sim a GRANDEZA.
+- 5 === '5'	false: Para o JavaScript levar em consideração o tipo, fazemos o uso do OPERADOR DE IGUALDADE/DESIGUALDADE RESTRITA (===)(!===)
 
 --  Os operadores lógicos do JavaScript são os mesmos encontrados de outras linguagens (já na ordem de precedência):
 - !	Negação: Operador unário, simplemente invertendo UM valor lógico que vai na frente do operador.
