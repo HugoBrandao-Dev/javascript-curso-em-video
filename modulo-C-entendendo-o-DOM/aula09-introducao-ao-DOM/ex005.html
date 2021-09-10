@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Introdução ao DOM</title>
+
+	<style>
+		body {
+			background-color: rgb(113, 113, 226);
+			color: white;
+			font: normal 10pt Arial;
+		}
+	</style>
+</head>
+<body>
+	<h1 id="titulo">Iniciando estudos com DOM</h1>
+	<p>Aqui vai o resultado</p>
+	<p>Aprendendo a usar <strong>DOM</strong></p>
+	<p name="curso">Este é um curso de JavaScript</p>
+	<p class="plataforma">Um curso da plataforma Curso em Vídeo</p>
+	<div id="msg">Clique em mim</div>
+
+	<script>
+		// window.document.write(window.document.URL)
+		// Seleção por nome de tag
+		var p1 = window.document.getElementsByTagName('p')[0]
+		var p2 = window.document.getElementsByTagName('p')[1]
+		var corpo = window.document.body
+
+		// Seleção por ID
+		var mensagem = document.getElementById('msg')
+
+		// Seleção por NOME (name)
+		var curso = document.getElementsByName('curso')[0]
+
+		// Seleção por Classe (class)
+		var plataforma = document.getElementsByClassName('plataforma')[0]
+
+		// Seleção utilizando o Seletor
+		var titulo = document.querySelector('h1#titulo')
+
+		// Selecionadas atravé dos nome de suas tag
+		corpo.style.backgroundColor = "purple"
+		window.document.write("Está escrito assim: " + p1.innerText)
+		p1.style.color = "black"
+		document.write(p2.innerText)
+		document.write(p2.innerHTML) // Trará também o negrito
+
+		// Selecionada por ID
+		mensagem.style.backgroundColor = 'green'
+		mensagem.innerText = 'Estou aguardando'
+		
+		// Selecionada pelo Nome (name)
+		curso.innerText = 'JavaScript'
+
+		// Selecionada pela Classe (class)
+		plataforma.style.color = 'yellow'
+
+		// Selecionada utilizando Seletor
+		titulo.style.fontStyle = 'italic'
+	</script>
+</body>
+</html>
