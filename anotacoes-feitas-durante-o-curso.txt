@@ -11,7 +11,7 @@ window.prompt	Abre um campo de digitação para o usuário
 /**/ 	Para comentários de mais de uma linha
 
 VARIÁVEIS
-Em sua criação, as variáveis recebem a palávra var na sua frente:
+Em sua criação, as variáveis recebem a palavra var na sua frente:
 var [NOME DA VARIÁVEL] = [VALOR]
 
 FORMAS DE SE DECLARAR UMA VARIÁVEL DO TIPO STRING:
@@ -64,7 +64,7 @@ O resultado de um input do | windows.prompt | é uma string, sendo assim é necess
 - [ENTRADA].toString()
 - String([ENTRADA])
 
-Para saída de dados contendo valores de variáveis, além da concatenação, temos a utilização da template string, são delimitadas por crases, onde cada variável vai dentro de um placeholder ${[VARIÁVEL]}.
+Para saída de dados contendo valores de variáveis, além da concatenação, temos a utilização da template string, que são delimitadas por crases, onde cada variável vai dentro de um placeholder ${[VARIÁVEL]}.
 
 `Meu nome é ${nome} e tenho ${idade} anos`
 
@@ -78,7 +78,7 @@ document.write('[MENSAGEM]')	Permite escrever uma mensagem na própria tela, tamb
 -- ALGUNS MÉTODOS PARA TRATAMENTO DE NÚMEROS
 - [VARIÁVEL].toFixed([CASAS])		Define a quantidade de casas decimais que serão mostradas
 - [VARIÁVEL].toFixed([CASAS]).replace('[ITEM_1]', '[ITEM_2]')	Define as casas decimais e faz a substituição ("equivalência") do primeiro item pelo segundo.
-- [VARIÁVEL].toLocaleString('pt-BR', {style: 'currency', corrency: 'USD'})	NESTE caso, fará a formatação monetária para a moeda americana (dolar)
+- [VARIÁVEL].toLocaleString('pt-BR', {style: 'currency', corrency: 'BRL'})	NESTE caso, fará a formatação monetária para a moeda brasileira.
 
 ################# Operadores (Parte I)
 
@@ -91,7 +91,7 @@ document.write('[MENSAGEM]')	Permite escrever uma mensagem na própria tela, tamb
 4º + -
 OBS: Não há o operador de divisão inteira
 
--- Operadores simples, auto-atribuição e de incremento (pré e pos), são os mesmo do Java e outras linguagens.
+-- Operadores simples, auto-atribuição e de incremento/descremento pré e pos, são os mesmo do Java e outras linguagens.
 
 ################# Operadores (Parte II)
 
@@ -107,7 +107,7 @@ OBS: Não há o operador de divisão inteira
 
 OBS: Quando se tem operadores aritméticos, relacionais e lógicos em uma mesma expressão, a ordem de resolução será:
 	1º Operadores aritméticos
-	2º Operadores relacionais	Fazendo quem vez primeiro (sem ordem de precendência interna)
+	2º Operadores relacionais	Fazendo quem vem primeiro (sem ordem de precendência interna)
 	3º Operadores lógicos
 
 -- Operadores ternários: Funciona da mesma forma que no Java:
