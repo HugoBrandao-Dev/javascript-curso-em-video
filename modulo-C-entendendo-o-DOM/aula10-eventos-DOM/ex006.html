@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Eventos DOM</title>
+	
+	<style>
+		#area {
+			/* Tem diferença entre colocar no início ou no fim desse 
+			bloco */
+			font: normal 15pt Arial;
+			background-color: rgb(42,139,42);
+			color: rgb(255,255,255);
+			width: 200px;
+			height: 200px;
+			line-height: 200px;
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+	<!-- 
+		Exemplo de eventos dentro da própria tag 
+		<h1>Eventos DOM</h1>
+		<div id="area" onclick="clicar()" onmouseenter="entrar()" onmouseout="sair()">
+			Interaja...
+		</div>
+	-->
+
+	<div id="area">
+		Interaja...
+	</div>
+	
+	<script>
+		// Variáveis
+		var divArea = window.document.getElementById('area')
+
+		// Eventos
+		divArea.addEventListener('click', clicar)
+		divArea.addEventListener('mouseenter', entrar)
+		divArea.addEventListener('mouseout', sair)
+
+		function clicar() {
+			divArea.innerText = 'Clicou!!'
+			divArea.style.backgroundColor = 'red'
+		}
+		function entrar() {
+			divArea.innerText = 'Mouse entrou!!'
+		}
+		function sair() {
+			divArea.innerText = 'Mouse saiu!!'
+			divArea.style.backgroundColor = 'green'
+		}
+	</script>
+</body>
+</html>

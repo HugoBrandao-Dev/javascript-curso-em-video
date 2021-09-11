@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Eventos DOM: Somanto valores</title>
+
+	<style>
+		body {
+			font: normal 20pt Arial;
+		}
+		input {
+			border: solid 2px black;
+			padding: 5px 10px;
+			font-size: 20px;
+			outline: none;
+		}
+		#btn-somar {
+			padding: 5px 10px;
+			font-size: 20px;
+		}
+		#resultado {
+			margin-top: 20px;
+			font-weight: bold;
+			color: red;
+		}
+	</style>
+</head>
+<body>
+	<h1>Somando Valores</h1>
+	<input type="number" name="txt-num1", id="input-num1">+
+	<input type="number" name="txt-num2" id="input-num2">
+	<button type="button" id="btn-somar" onclick="somar()">Somar</button>
+	<div id="resultado">
+		Aguardando...
+	</div>
+
+	<script>
+		function somar() {
+			// Elementos DOM
+			var inputNum1 = document.getElementsByName('txt-num1')[0]
+			var inputNum2 = document.querySelector('input#input-num2')
+			var divResultado = document.querySelector('div#resultado')
+
+			// Variáveis
+			var num1 = Number(inputNum1.value)
+			var num2 = Number(inputNum2.value)
+			var soma = num1 + num2
+
+			divResultado.innerText = `A soma entre ${ num1 } e ${ num2 } é igual a ${ soma }.`
+		}
+	</script>
+</body>
+</html>
