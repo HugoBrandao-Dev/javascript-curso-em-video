@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Verificador de origem</title>
+
+	<style>
+		input, button {
+			padding: 5px 10px;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<form>
+			Local de nascimento:<input type="text" name="txtorigem" placeholder="Onde você nasceu?">
+			<button type="button" id="btn-analizar">Analizar</button>
+		</form>
+		<div id="resultado-analise">
+
+		</div>
+	</div>
+
+	<script>
+		var btnAnalizar = document.getElementById('btn-analizar')
+
+		btnAnalizar.addEventListener('click', analizarPais)
+
+		function analizarPais() {
+			var inputOrigem = document.getElementsByName('txtorigem')[0]
+			var divResultadoAnalise = document.querySelector('div#resultado-analise')
+			var origem = inputOrigem.value
+			
+			// Estrutura condicional composta
+			if (origem === 'brasil') {
+				divResultadoAnalise.innerHTML = '<p>Você é <strong>brasileiro(a)</strong>.</p>'
+			} else {
+				divResultadoAnalise.innerHTML = '<p>Você é <strong>estrangeiro(a)</strong>.</p>'
+			}
+		}
+	</script>
+</body>
+</html>

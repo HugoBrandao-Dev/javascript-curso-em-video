@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Condições (Parte 1)</title>
+
+	<style>
+		input[name='input-velocidade'] {
+			width: 80px;
+		}
+	</style>
+</head>
+<body>
+	<h1>Sistema de multas</h1>
+	Velocidade do veículo: <input type="number" name="input-velocidade" placeholder="Velocidade" autofocus> km/h
+	<button type="button" id="btn-verificar">Verificar</button>
+	<div class="analise">
+
+	</div>
+
+	<script>
+		var btnVerificar = document.getElementById('btn-verificar')
+		var divAnalise = document.getElementsByClassName('analise')[0]
+
+		btnVerificar.addEventListener('click', verificarVelocidade)
+
+		function verificarVelocidade() {
+			var inputVelocidade = document.getElementsByName('input-velocidade')[0]
+			var velocidade = Number(inputVelocidade.value)
+			divAnalise.innerHTML = `<p>Sua velocidade atual é de <strong>${ velocidade } km/h</strong>.</p>`
+
+			// Estrutura condicional simples
+			if (velocidade > 60) {
+				divAnalise.innerHTML += `<p>Você está <strong>MULTADO</strong> por excesso de velocidade.</p>`
+			}
+
+			divAnalise.innerHTML += `<p>Dirija sempre com cinto de segurança.</p>`
+		}
+	</script>
+</body>
+</html>
