@@ -171,10 +171,10 @@ OBS: Em JS existe as funções anonimas, que são aquelas que não tem nome.
 
 -- Condição simples (if)
 -- Condição composta (if, else)
--- Condição aninhada (if, else if, else)
 
 ################# Condições - Parte II
 
+-- Condição Aninhada (if, else if, else)
 -- Condição Múltipla (switch) é a mesma de outras linguagens de programação, servindo tanto para números inteiro quando para caracteres.
 -- Para pegar o dia da semana e/ou a hora:
 	1º - Cria um objeto da class Date();
