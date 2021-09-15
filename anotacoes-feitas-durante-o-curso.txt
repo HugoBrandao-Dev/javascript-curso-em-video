@@ -120,7 +120,7 @@ OBS: Quando se tem operadores aritméticos, relacionais e lógicos em uma mesma ex
 	OBS: A figura é apenas a representação de alguns ELEMENTOS DOM, sendo que o mesmo possui muitos outros.
 	Métodos mais usado para SELECIONAR um ELEMENTO da árvore DOM
 	- Por marca (tags)
-		getElementsByTagName('[NOME DA TAG]')['[INDEX DO ELEMENTO]'] : Neste método, elemento ele pegará todas as tags que possuem o nome desejado, por isso "Elements" está no plural. O item OPCIONAL é para caso queira pegar UM DESSES OBJETOS em específico.
+		getElementsByTagName('[NOME DA TAG]')[[INDEX DO ELEMENTO]] : Neste método, elemento ele pegará todas as tags que possuem o nome desejado, por isso "Elements" está no plural. O item OPCIONAL é para caso queira pegar UM DESSES OBJETOS em específico.
 	- Por ID
 		getElementById('[ID DO ELEMENTO]') : Mesmo princípio, porém, como ID é único, ele pegará somente um elemento.
 	- Por nome
@@ -133,7 +133,7 @@ OBS: Quando se tem operadores aritméticos, relacionais e lógicos em uma mesma ex
 			-ELEMENTO: É o tipo de elemento que se deseja pegar (div, p, h1, etc)
 			-CARACTER: Vai depender da classe ou identificador. Será '#', caso seja um identificador (id) ou '.', caso seja uma classe
 			-NOME: Nome dado a classe ou identificador
-	OBS: No casos dos inputs do tipo "radio", o [INDEX DO ELEMENTO] representa um item do grupo
+	OBS: CUIDADO com inputs do tipo "radio", o [INDEX DO ELEMENTO] representa um item do grupo com o mesmo identificador e não um elemento do DOM.
 
 -- Outros métodos
 	[VARIÁVEL].innerText : Pega/seleciona conteúdo do texto

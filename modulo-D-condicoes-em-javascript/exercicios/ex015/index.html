@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- Arquivo de reset do estilo -->
+	<!-- <link rel="stylesheet" href="css/reset.css"> -->
+
+	<!-- Arquivo interno de estilo -->
+	<link rel="stylesheet" href="css/style.css">
+
+	<!-- Google Fonts: Nunito -->
+	<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700&display=swap" rel="stylesheet">
+	<title>Verificador de idade</title>
+</head>
+<body>
+	<header>
+		<h1>Verificador de idade</h1>
+	</header>
+	<section>
+		<div>
+			<p>
+				Ano de nascimento: 
+				<input type="number" name="input-nascimento" autofocus>
+			</p>
+			<p>
+				Sexo: 
+				<label><input type="radio" name="input-sexo" value="masculino" checked>Masculino</label>
+				<label><input type="radio" name="input-sexo" value="feminino">Feminino</label>
+			</p>
+			<button type="button" id="btn-verificar" onclick="verificar()">Verificar</button>
+		</div>
+		<div id="analise">
+			Preencha os dados acima para ver o resultado.
+		</div>
+	</section>
+	<footer>
+		<p>&copy; Curso em Vídeo</p>
+	</footer>
+
+	<script src="script/main.js"></script>
+</body>
+</html>

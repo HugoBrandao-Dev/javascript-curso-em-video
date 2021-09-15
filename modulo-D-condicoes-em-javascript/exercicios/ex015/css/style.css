@@ -1,0 +1,58 @@
+header, footer {
+	color: white;
+	text-align: center;
+}
+
+h1 {
+	font-size: 2em;
+}
+
+body {
+	background-color: rgb(70,142,236);
+	font-family: 'Nunito', sans-serif;
+}
+
+header {
+	margin-top: 15px;
+}
+
+section {
+	background-color: white;
+	border-radius: 10px;
+	padding: 15px;
+	width: 500px;
+	margin: 15px auto;
+	box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.589);
+	font-size: 1em;
+}
+
+section p:nth-child(2) {
+	margin: 20px auto;
+}
+
+footer {
+	font-style: italic;
+	font-size: 1em;
+}
+
+#analise {
+	margin-top: 15px;
+	text-align: center;
+}
+
+#btn-verificar {
+	padding: 5px 10px;
+	border: ridge 3px white;
+	background-color: rgb(70,142,236);
+	color: white;
+	cursor: pointer;
+
+	transition-duration: 0.5s;
+	transition-delay: 0.2s;
+}
+
+#btn-verificar:hover {
+	border-color: rgb(70,142,236);
+	color: rgb(70,142,236);
+	background-color: white;
+}
