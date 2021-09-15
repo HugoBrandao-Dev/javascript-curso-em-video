@@ -156,6 +156,7 @@ OBS: Em JS existe as funções anonimas, que são aquelas que não tem nome.
 		- onmousedown : Quando o botão do mouse estiver precionado
 		- onmouseup: Quando o botão do mouse for solto
 		- onmousemove: Quando o mouse se mexer
+		OBS: NÃO USAR () nas funções quando estão em tags, a não ser que tenham parâmetros a serem passados.
 	Quando em eventListener, basta tirar o 'on' da frente:
 		[VARIÁVEL].addEventListener('click', [FUNÇÃO A SER CHAMADA])
 		[VARIÁVEL].addEventListener('mouseenter', [FUNÇÃO A SER CHAMADA])
@@ -191,7 +192,7 @@ OBS: Em JS existe as funções anonimas, que são aquelas que não tem nome.
 ################# Exercícios JavaScript (Parte 2)
 
 -- Para fazer com que a página execute um script html toda vez que é iniciada, coloca-se o parâmetro "onload", na tag que se deseja, seguida da função a ser executada
-	Ex: <body onload="[FUNÇÃO]"></body>
+	Ex: <body onload="[FUNÇÃO]()"></body>
 
 -- Para alterar a foto no JavaScript, basta fazer uso da propriedade do CSS3 "src":
 	Ex: [OBJETO].src = "[CAMINHO DA NOVA IMAGEM]"
