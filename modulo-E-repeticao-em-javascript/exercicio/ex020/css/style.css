@@ -69,8 +69,9 @@ footer {
 	border-radius: 5px;
 }
 
-#saida {
+#saida select {
 	display: none;
 	border: solid 2px rgb(70,142,236);
-	padding: 10px 20px;
+	padding: 5px;
+	outline: none;
 }
