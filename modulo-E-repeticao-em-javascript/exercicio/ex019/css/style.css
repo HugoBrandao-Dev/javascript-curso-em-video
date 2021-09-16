@@ -1,0 +1,78 @@
+* {
+	box-sizing: border-box;
+}
+header, footer {
+	color: white;
+	text-align: center;
+}
+
+h1 {
+	font-size: 2em;
+}
+
+body {
+	background-color: rgb(70,142,236);
+	font-family: 'Nunito', sans-serif;
+}
+
+header {
+	margin-top: 15px;
+}
+
+section {
+	background-color: white;
+	border-radius: 10px;
+	padding: 15px;
+	width: 500px;
+	margin: 15px auto;
+	box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.589);
+	font-size: 1em;
+}
+
+footer {
+	font-style: italic;
+	font-size: 1em;
+}
+
+#entrada {
+	width: 100%;
+	display: flex;
+	align-items: center;
+}
+
+#entrada .inputs {
+	width: 50%;
+}
+
+#entrada input {
+	width: 100%;
+	padding: 5px 10px;
+	border: none;
+	border-bottom: solid 2px rgb(70,142,236);
+	outline: none;
+}
+
+#entrada p {
+	margin-bottom: 20px;
+	width: 100%;
+}
+
+section #btn-contar {
+	height: 75px;
+	width: 75px;
+	border-radius: 75px;
+	background-color:rgb(70,142,236);
+	border: none;
+	margin: 0 auto;
+	color: white;
+	cursor: pointer;
+}
+
+section #btn-contar:hover {
+	box-shadow: 0 0 5px rgb(70,142,236);
+}
+
+#saida {
+	margin-top: 20px;
+	text-align: center;
+}
