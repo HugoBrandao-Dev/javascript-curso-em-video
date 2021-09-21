@@ -259,13 +259,13 @@ Para acrescentar novos valores a um array pré-existênte:
 Para saber o comprimento de um vetor, usa-se o ATRIBUTO:
 	[VETOR].length
 
-Para organizar um vetor, usa-se o método .sort:
+Para organizar um vetor, usa-se o método .sort, mexerá diretamente com o vetor:
 	[VETOR].sort()
 	OBS: O sort "puro" faz o ordenamento tratando os dados como String. Para o ordenamento de valores numéricos, usa-se, como PARÂMETRO do sort uma FUNÇÃO ANÔNIMA:
 		function(a, b) {return a - b}
 
 Existe também o "for in", que é um for para variáveis compostas e objetos, sua sintaxe é:
-	for (var [VARIÁVEL] in [VETOR]) {
+	for (let [VARIÁVEL] in [VETOR]) {
 		console.log([VETOR][[VARIÁVEL]])
 	}
 
