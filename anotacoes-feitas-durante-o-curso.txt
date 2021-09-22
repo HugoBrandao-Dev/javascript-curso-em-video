@@ -141,7 +141,7 @@ OBS: Quando se tem operadores aritméticos, relacionais e lógicos em uma mesma ex
 
 #################### Eventos DOM
 
--- Para criar uma função em JavaScript, faz-se:
+-- Para criar uma função em JavaScript, fazemos:
 	function [NOME DA FUNÇÃO](| [PARÂMETROS] OPCIONAL |){
 		[BLOCO DE COMANDOS]
 	}
@@ -275,7 +275,11 @@ Para fazer a busca do índice de um determinado valor:
 
 ############## FUNÇÕES
 
-Como já vimos, para criar uma função em JavaScript, faz-se:
+São ações executadas assim que são chamadas ou na decorrência de algum evento.
+Uma função pode receber parâmetros e pode retornar um resultado.
+Parâmetros na chamada são chamados de REAIS, já na função são chamados de FORMAIS.
+
+Como já vimos, para criar uma função em JavaScript, fazemos:
 	function [NOME DA FUNÇÃO](| [PARÂMETROS] OPCIONAL |){
 		[BLOCO DE COMANDOS]
 	}
