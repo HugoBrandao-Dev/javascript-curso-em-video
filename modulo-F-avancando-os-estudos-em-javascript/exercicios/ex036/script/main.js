@@ -27,7 +27,7 @@ function gerarValoresNoSelect() {
 
 function adicionarValor() {
 	let valor = Number(inputValor.value)
-	if (valor.length === 0 || isNaN(valor)) {
+	if (valor.length === 0 || isNaN(valor) || valor > 100 || valor < 0) {
 		alert('ERRO: O valor informado é inválido.')
 	} else {
 		if (valores.indexOf(valor) >= 0) {
@@ -39,6 +39,7 @@ function adicionarValor() {
 		}
 	}
 	inputValor.value = ''
+	inputValor.focus()
 }
 
 function verificarValores() {
