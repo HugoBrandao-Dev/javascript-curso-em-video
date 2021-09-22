@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- Arquivo de reset do estilo -->
+	<link rel="stylesheet" href="css/reset.css">
+
+	<!-- Arquivo interno de estilo -->
+	<link rel="stylesheet" href="css/style.css">
+
+	<!-- Google Fonts: Nunito -->
+	<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700&display=swap" rel="stylesheet">
+	<title>Analizador de números</title>
+</head>
+<body>
+	<header>
+		<h1>Analizador de números</h1>
+	</header>
+	<section>
+		<div id="entrada">
+			<div class="entrada-valor">
+				Valor: <input type="number" name="number-valor" class="input" placeholder="Informe um valor" autofocus>
+				<button id="btn-adicionar" class="btn">Adicionar</button>
+			</div>
+			<div class="entrada-valores">
+				<select name="select-valores" class="input" size="8">
+				</select>
+				<button id="btn-calcular" class="btn">Calcular</button>
+			</div>
+		</div>
+		<div id="saida">
+
+		</div>
+	</section>
+	<footer>
+		<p>&copy; Curso em Vídeo</p>
+	</footer>
+
+	<script src="script/main.js"></script>
+</body>
+</html>

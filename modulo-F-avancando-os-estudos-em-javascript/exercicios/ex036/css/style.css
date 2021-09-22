@@ -1,0 +1,75 @@
+header, footer {
+	color: white;
+	text-align: center;
+}
+
+h1 {
+	font-size: 2em;
+}
+
+body {
+	background-color: rgb(70,142,236);
+	font-family: 'Nunito', sans-serif;
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+}
+
+header {
+	margin-top: 15px;
+}
+
+section {
+	background-color: white;
+	border-radius: 10px;
+	padding: 15px;
+	width: 500px;
+	margin: 15px auto;
+	box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.589);
+	font-size: 1em;
+}
+
+footer {
+	font-style: italic;
+	font-size: 1em;
+	outline: none;
+}
+
+.input, .btn {
+	padding: 5px 10px;
+	border: solid 2px rgb(70,142,236);
+	outline: none;
+}
+
+.btn {
+	cursor: pointer;
+	background-color: rgb(70,142,236);
+	color: white;
+}
+
+#entrada, #entrada .entrada-valor, #entrada .entrada-valores {
+	display: flex;
+	align-items: center;
+}
+
+#entrada, #entrada .entrada-valores {
+	flex-direction: column;
+}
+
+#entrada, #saida p {
+	margin-bottom: 10px;
+}
+
+#entrada .entrada-valor .input {
+	border-right: none;
+	margin-left: 10px;
+	border-radius: 5px 0px 0px 5px;
+}
+
+#btn-adicionar {
+	border-radius: 0px 5px 5px 0px;
+}
+
+#btn-calcular, #entrada .entrada-valores{
+	margin-top: 10px;
+}
